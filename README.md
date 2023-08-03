@@ -4,5 +4,5 @@
 Arquivo | Conteúdo
 --------|-----------
 main.py | Memória e variáveis, dados textuais, dados numéricos, usando variáveis  <br>
-x | Debugging (verificação de erros), padrões e boas práticas, inputs e outputs, tipos de dados <br>
+main(1).py | Debugging (verificação de erros), padrões e boas práticas, inputs e outputs, tipos de dados <br>
 
