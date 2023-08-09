@@ -63,6 +63,13 @@ balance = savings * 1.05
 # Convert the balance into a string and update the variable
 balance = str(balance)
 
+Math operations between integers and floats produce a float.
+
+What will the code display on the screen?
+x = 9
+y = 3.0
+print(x+y) #12.0
+
 # Concatenate the 2 strings to produce a message
 message = "Amount in 1 year: " + balance
 
