@@ -8,4 +8,5 @@ main(1).py | Debugging (verificação de erros), padrões e boas práticas, inpu
 main(2).py | Checando os tipos de dados, Conversão de dados e Consertando tipos de dados <br>
 main(3).py | Operações de comparação e Operações lógicas <br>
 main(4).py | Seleção, Iteração (for, while), Sequenciamento, Pseudocódigo <br>
+main(5).py | 
 
