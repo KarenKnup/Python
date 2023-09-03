@@ -1,0 +1,268 @@
+
+
+>>>Functions
+
+A function is a group of related statements that performs a specific task.
+
+Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable.
+
+Furthermore, it avoids repetition and makes the code reusable. 
+
+A function has a name and can have arguments.
+
+For example:
+
+print("Hello")
+
+Here, print is the function name and "Hello" is the argument.
+
+There are many built-in functions in Python.
+
+To jog your memory, here are some examples that you've already seen:
+
+print("Hello world!")
+range(2, 20)
+str(12)
+range(10, 20, 3)
+______________________________________________________________
+
+>>>>>>>List Functions
+Python has a bunch of useful built-in functions for lists.
+
+len() lets you get the number of items in a list. Like this:
+
+CODE PLAYGROUND: PY
+nums = [1, 3, 5, 2, 4]
+print(len(nums))
+
+Unlike indexing items, len does not start with 0. The list above contains 5 items, meaning len will return 5.
+
+You can also use len on strings to return their length (character count).
+
+For example:
+
+CODE PLAYGROUND: PY
+str = "some text"
+x = len(str)
+print(x)
+
+Remember that space is also a character.
+
+The append() function is used to add an item to the end of the list:
+
+CODE PLAYGROUND: PY
+nums = [1, 2, 3]
+nums.append(4)
+print(nums)
+
+Note, that the function is called using the list name, followed by a dot.
+
+insert() inserts a new item at the given position in the list:
+
+CODE PLAYGROUND: PY
+words = ["Python", "fun"]
+words.insert(1, "is")
+print(words)
+
+The first argument is the position index, while the second parameter is the item to insert at that position.
+
+index() finds the first occurrence of a list item and returns its index.
+
+CODE PLAYGROUND: PY
+letters = ['p', 'q', 'r', 's', 'p', 'u']
+print(letters.index('r'))
+print(letters.index('p'))
+print(letters.index('q'))
+
+An error is returned in case the specified item is not found in the list.
+
+max(list): Returns the maximum value.
+
+min(list): Returns the minimum value.
+
+CODE PLAYGROUND: PY
+x = [1, 8, 42, 3]
+
+print(min(x))
+print(max(x))
+
+list.count(item): Returns a count of how many times an item occurs in a list.
+
+list.remove(item): Removes an item from a list.
+
+list.reverse(): Reverses items in a list.
+
+Some examples:
+
+CODE PLAYGROUND: PY
+x = [2, 4, 6, 2, 7, 2, 9]
+print(x.count(2))
+
+x.remove(4)
+print(x)
+
+x.reverse()
+print(x)
+______________________________________________________________________
+
+You can create your own functions by using the def statement.
+
+Here’s an example of a function named my_func. It takes no arguments, and prints "spam" three times.
+
+def my_func():
+  print("spam")
+  print("spam")
+  print("spam")
+
+So once you’ve defined a function, you can call it multiple times in your code.
+
+Like this:
+
+CODE PLAYGROUND: PY
+def hello():
+  print("Hello world!")
+
+hello()
+hello()
+hello()
+
+Note, that we call a function using its name and the parentheses.
+The function needs to be defined before it can be called. Calling a function before its definition will cause an error.
+
+For example:
+
+CODE PLAYGROUND: PY
+hello()
+
+def hello():
+  print("Hello world!")
+
+How many lines will the following code output?
+
+def foo():
+
+   print(1)
+
+   print(2)
+
+
+
+foo()
+
+foo() #4
+
+_________________________________________________________________________
+
+You can call the same function with different arguments.
+
+CODE PLAYGROUND: PY
+def exclamation(word):
+  print(word + "!")
+
+exclamation("spam")
+exclamation("eggs")
+exclamation("python")
+
+Arguments are used to pass information to the function. This allows us to reuse the function logic for different values.
+
+
+Even better, you can define functions with more than one argument; separate them with commas. Like this:
+
+CODE PLAYGROUND: PY
+def print_sum_twice(x, y):
+  print(x + y)
+  print(x + y)
+
+print_sum_twice(5, 8)
+
+As you can see in the previous examples, arguments can be used as variables inside the function.
+
+You can have different statements in your functions, working with the argument variables, such as if statements and loops.
+
+___________________________________________________________________
+
+>>>>>>>>>Returning from Functions
+Certain functions, such as int or str, return a value instead of outputting it. 
+
+The returned value can be used later in the code, for example, by getting assigned to a variable. 
+
+To do this for your defined functions, you can use the return statement. Like this:
+
+CODE PLAYGROUND: PY
+def sum(x, y):
+  return x+y
+
+Now we can use our function and assign the result to a variable:
+
+CODE PLAYGROUND: PY
+def sum(x, y):
+  return x+y
+
+res = sum(42, 7)
+print(res)
+
+Returning is useful when you don't need to print the result of the function, but need to use it in your code. For example, a bank account's withdraw() function could return the remaining balance of the account. 
+
+
+You can use the returned value in your code, for example, an if statement:
+
+CODE PLAYGROUND: PY
+def max(x, y):
+  if x >=y:
+    return x
+  else:
+    return y
+
+if max(6, 4) > 10:
+  print("Yes")
+else:
+  print("Nope")
+
+Once you return a value from a function, it immediately stops being executed. 
+
+Any code placed after the return statement won’t be executed.
+
+For example:
+
+CODE PLAYGROUND: PY
+def add_numbers(x, y):
+  total = x + y
+  return total
+  print("This won't be printed")
+
+print(add_numbers(4, 5))
+
+
+A function can only return once, thus, if you need to return multiple values, you can use a list.
+
+For example:
+
+CODE PLAYGROUND: PY
+def double(a, b):
+  return [a*2, b*2]
+
+x = double(6, 9)
+print(x)
+___________________________________________________________________
+
+>>>> Comments are annotations to code used to make it easier to understand. They don't affect how code is run. 
+
+x = 365
+y = 7
+
+print(x % y) # find the remainder
+
+>>>> Docstrings (documentation strings) are similar to comments, in that they’re designed to explain code. But, they’re more specific and have a different syntax.
+
+They’re created by putting a multiline string containing an explanation of the function below the function's first line. Like this:
+
+CODE PLAYGROUND: PY
+def shout(word):
+"""
+Print a word with an
+exclamation mark following it.
+"""
+print(word + "!")
+
+shout("spam")
+
