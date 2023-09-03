@@ -13,5 +13,7 @@ main(6).py | Tomada de decisão em loja de shopping <br>
 main(7).py | Tomada de decisão sobre compra de ingressos <br>
 main(8).py | Tomada de decisão em uma festa <br>
 main(9).py | Tomada de decisão - caso INSS <br>
+main(10) | Lists (Vetores, Matrizes, Strings), operações de Lists, Loop 'for', Range, Lists slices <br>
+main(11) | Funções, Funções de Lists, Argumentos, Retorno de funções, Comments e Docstrings <br>
 
 
