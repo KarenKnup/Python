@@ -1,0 +1,299 @@
+>>>>>>>> Lists
+Lists are used to store items. 
+
+We can create a list by using square brackets with commas separating items. Like this:
+
+words = ["Hello", "world", "!"]
+
+In this example the words list contains three string items: Hello, world and !.
+
+If you want to access a certain item in the list, you can do this by using its index in square brackets.
+
+In our example, that would look like this:
+
+words = ["Hello", "world", "!"]
+print(words[0])
+print(words[1])
+print(words[2])
+
+The first list item's index is 0, rather than 1, as you might expect.
+
+We can do some pretty cool stuff with them in Python. For example, we can use nested lists to represent 2D grids, such as matrices.
+
+For example:
+
+m = [
+    [1, 2, 3],
+    [4, 5, 6]
+    ]
+
+This is useful because a matrix-like structure can allow you to store data in row-column format, like in ticketing programs, that need to store the seat numbers in a matrix, with their corresponding rows and numbers.
+
+Strings
+Strings can be indexed like lists too!
+
+Indexing a string is like creating a list containing each character in the string.
+
+For example:
+
+str = "Hello world!"
+print(str[6])
+
+Space (" ") is also a symbol and has an index.
+
+The string "Hello" can be thought of as a list, where each character is an item in the list. The first item is "H", the second item is "e", and so on.
+
+What is the output of this code?
+
+x = "Python"
+
+print(x[1] + x[4]) #yo
+_____________________________________________________________
+
+The item at a certain index in a list can be reassigned.
+
+For example:
+
+nums = [5, 8, 2]
+nums[1] = 42
+
+print(nums)
+
+The list of cool things we can do with lists just keeps growing!
+
+Lists can also be added the same way strings can be.
+
+For example:
+
+nums = [1, 2, 3]
+print(nums + [4, 5, 6])
+
+Figure out the output of this code:
+
+x = [2, 4]
+
+x += [6, 8]
+
+print(x[2]//x[0])
+
+Lists and strings share a lot of similarities - you can basically think of strings as lists of characters that can't be changed.
+
+Similar to strings, a list can be multiplied by an integer:
+
+nums = [1, 2, 3]
+print(nums * 3)
+
+This repeats the list the specified number of times.
+
+It returns True if the item occurs one or more times in the list, and False if it doesn't. Like this:
+
+words = ["spam", "egg", "spam", "sausage"]
+print("spam" in words)
+print("egg" in words)
+print("tomato" in words)
+
+The in operator is also used to determine whether or not a string is a substring of another string.
+
+x = "hello world"
+
+if "world" in x:
+  print("Yes")
+
+Similarly, to check if an item is not in a list, you can use the not operator in one of the following ways:
+
+nums = [1, 2, 3]
+print(not 4 in nums)
+print(4 not in nums)
+print(not 3 in nums)
+print(3 not in nums)
+
+Given a list of numbers, output "bingo" if it contains the input number.
+
+x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
+
+num = int(input())
+
+if num in x:
+  print("bingo")
+_______________________________________________________________
+
+The for loop is used to iterate over a given sequence, such as lists or strings.
+
+The code below outputs each item in the list and adds an exclamation mark at the end:
+
+words = ["hello", "world", "spam", "eggs"]
+for word in words:
+  print(word + "!")
+
+A for loop can be used to iterate over strings.
+
+For example:
+
+str = "testing for loops"
+count = 0
+
+for x in str:
+  if x == 't':
+    count += 1
+
+print(count)
+
+The code above defines a count variable, iterates over the string and calculates the count of 't' letters in it. During each iteration, the x variable represents the current letter of the string.
+
+The count variable is incremented each time the letter 't' is found, so at the end of the loop, it represents the number of 't' letters in the string.
+
+
+Similar to while loops, the break and continue statements can be used in for loops, to stop the loop or jump to the next iteration.
+
+text = "some text"
+for x in text:
+  if x == 'e':
+    break
+  print(x)
+
+_________________________________________________________________
+
+>>>>>>>>>Range
+Python makes it super easy to create number sequences using the range() function.
+
+By default, it starts from 0, increments by 1 and stops before the specified number.
+
+The following code generates a list containing all of the integers, up to 10.
+
+numbers = range(10)
+
+In order to output the range as a list, we need to explicitly convert it to a list, using the list() function.
+
+CODE PLAYGROUND: PY
+numbers = list(range(10))
+print(numbers)
+
+
+If range is called with one argument, it’ll produce an object with values from 0 to that argument. 
+
+If it’s called with two arguments, it’ll produce values from the first to the second.
+
+For example:
+
+CODE PLAYGROUND: PY
+numbers = list(range(3, 8))
+print(numbers)
+
+Remember, the second argument is not included in the range, so range(3, 8) won’t include the number 8.
+
+What's the result of this code?
+
+print(range(20) == range(0, 20)) #True
+
+There’s also a third argument you can use with range(), and it’s really useful. It’s called Step and it determines the interval of the sequence produced. Take a look:
+
+CODE PLAYGROUND: PY
+numbers = list(range(5, 20, 2))
+print(numbers)
+
+Want to go backward? No problem! We can also create a list of decreasing numbers, using a negative number as the third argument.
+
+For example:
+
+CODE PLAYGROUND: PY
+x = list(range(7, 3, -1))
+print(x) #[7, 6, 5, 4]
+
+You can use ranges in for loops, without the need to convert them into lists. It’s commonly used to repeat some code a certain number of times. Like this
+
+CODE PLAYGROUND: PY
+for i in range(5):
+  print("hello!")
+
+You are creating a date picker for a website and need to output all of the years in a given period. 
+
+Write a program that takes two integers as input and outputs the range of numbers between the two inputs as a list.
+
+The output sequence should start with the first input number and end with the second input number, without including it.
+
+a = int(input())
+b = int(input())
+ 
+lista = list(range(a,b))
+c=0
+
+for i in range(a,b):
+  lista[c]=i
+  c+=1
+
+print(lista )
+______________________________________________________
+
+
+List slices allow you to get a part of the list using two colon-separated indices. This returns a new list containing all the values between the indices.
+
+Example:
+
+CODE PLAYGROUND: PY
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[2:6])
+print(squares[3:8])
+print(squares[0:1])
+Click to run
+Result:
+
+>>>
+[4, 9, 16, 25]
+[9, 16, 25, 36, 49]
+[0]
+>>>
+PY
+level
+Just like the arguments to range, the first index provided in a slice is included in the result, but the second isn't.
+
+If the first number in a slice is omitted, it’s taken to be the start of the list.
+
+Example:
+
+CODE PLAYGROUND: PY
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[:7]) #[0, 1, 4, 9, 16, 25, 36]
+
+If the second number is omitted, it’s taken to be the end.
+
+CODE PLAYGROUND: PY
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[7:]) #[49, 64, 81]
+
+Just like with ranges, your list slices can include a third number, representing the step, to include only alternate values in the slice. Like this:
+
+CODE PLAYGROUND: PY
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[::2]) #[0, 4, 16, 36, 64]
+print(squares[2:8:3]) #[4, 25]
+
+Negative values can also be used in list slicing (as well as normal list indexing). 
+
+Which means that when negative values are used for the first and second values in a slice (or a normal index), they count from the end of the list. Like this:
+
+CODE PLAYGROUND: PY
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[1:-1])
+Click to run
+Result:
+
+>>>
+[1, 4, 9, 16, 25, 36, 49, 64]
+>>>
+
+If a negative value is used for the step, the slice will be done backwards.
+
+Using [::-1] as a slice is a common and idiomatic way to reverse a list.
+
+CODE PLAYGROUND: PY
+nums = [5, 42, 7, 1, 0]
+res = nums[::-1]
+print(res) #[0, 1, 7, 42, 5]
+
+Write a program that takes a string as input and outputs the last character of that string.
+#your code goes here
+s = str(input())
+
+st = s[::-1]
+
+print(st[0])
