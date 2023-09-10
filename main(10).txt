@@ -154,6 +154,9 @@ for x in text:
 _________________________________________________________________
 
 >>>>>>>>>Range
+
+for <Contador> in range(<Val_ini>, <Val_fin>, <Incr./Decr.>):
+
 Python makes it super easy to create number sequences using the range() function.
 
 By default, it starts from 0, increments by 1 and stops before the specified number.
